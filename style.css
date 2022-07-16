@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap');
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --border-radius: 20px;
+}
+
+
+body{
+    background: url(./images/pattern-background-mobile.svg) no-repeat ;
+    background-position: top;
+    background-size: 100%;
+    background-color: hsl(225,100%,94%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: 'Red Hat Display', sans-serif;
+    /* position: fixed; */
+} 
+
+
+.container{
+    background-color: white;
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    margin: 0 auto;    
+    width: 87vw;
+    max-width: 450px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    border-radius: var(--border-radius);
+    box-shadow: 0px 20px 50px -7px rgb(183, 191, 241);
+}
+
+.summary{
+    padding: 0 1.5rem 2rem 1.5rem;
+
+}
+h1{
+    margin: 1.5rem 0 1rem 0;
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-align: center;
+    color: hsl(223, 47%, 23%);
+}
+.main-paragraph {
+    margin: 0 0.5rem;
+    line-height: 1.6rem;
+    text-align: center;
+    color: hsl(224, 23%, 55%);
+}
+
+.annual-plan{
+    background-color: hsl(270, 100%, 98%);
+    margin: 1.6rem 0 1.5rem 0;
+    padding: 1rem;
+    border-radius: 12px;
+    display: grid;
+    grid-auto-flow: column;
+        
+}
+.annual-plan strong {
+    font-weight: 900;
+    font-size: 0.9rem;
+    color: hsl(223, 47%, 23%);
+}
+.annual-plan p {
+    line-height: 1.7rem;
+    font-size: 0.9rem;
+    color: hsl(224, 23%, 55%);
+}
+.annual-plan a {
+    text-decoration: underline;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: hsl(245, 75%, 52%);
+    justify-self: end;
+    align-self: center;
+}
+.annual-plan a:hover {
+    text-decoration: none;
+    color: 	hsl(245, 83%, 68%);
+}
+#hero-image{
+    width: 100%;
+    /* object-fit: contain;   
+    z-index: -1; 
+    border-radius: 10px 10px 0 0; */
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    
+}
+#Proceed-to-Payment{
+    display: block;
+    background-color: hsl(245, 75%, 52%);
+    padding: 1rem 0;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-align: center;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 18px 30px -7px rgb(197, 189, 245);
+}
+#Cancel-Order{
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+    text-decoration: none;
+    color: gray;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+
+@media only screen and (min-width: 475px) {
+
+    body {
+        background-image: url("./images/pattern-background-desktop.svg");
+    }
+
+     .container{
+        /* margin: 0 2.5rem 3.1rem 2.5rem; */
+        width: 80vw;
+    } 
+
+    h1 {
+        /* margin-top: 2.5rem; */
+        font-size: 1.8rem;
+    }
+
+    .main-paragraph {
+        /* margin: 0 1.5rem; */
+        line-height: 1.65rem;
+        font-size: 1.1rem;
+    }
+
+    .summary {
+        /* margin: 1.3rem 0 1.8rem 0; */
+        /* padding: 1.6rem; */
+    }
+
+    .annual-plan strong {
+        font-size: 1rem;
+    }
+
+    .annual-plan p {
+        font-size: 1rem;
+    }
+
+    #Cancel-Order {
+        /* margin-top: 2rem; */
+    }
+} 
